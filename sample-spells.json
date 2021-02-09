@@ -1,0 +1,28 @@
+{
+  "spellLevels": [
+    {
+      "level": 0,
+      "spells": [
+        {
+          "name": "Ray of Frost",
+          "school": "Evocation",
+          "detailGroups": [
+            {
+              "title": "Casting",
+              "details": [
+                {
+                  "name": "Casting Time",
+                  "value": "1 Standard Action"
+                },
+                {
+                  "name": "Components",
+                  "value": "V,S"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
