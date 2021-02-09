@@ -1,0 +1,44 @@
+<table class="info detail-table">
+  <tr><td>DC</td><td>10 + Spell Level + casting modifier</td></tr>
+  <tr><td>Concentration Check</td><td>1d20 + Caster Level + casting modifier</td></tr>
+  <tr><td>Casting Defensively DC</td><td>15 + double spell level</td></tr>
+</table>
+
+{{#spellLevels}}
+  <div class="spell-group-header">
+    <div class="level-name">Level {{level}}</div>
+    <div class="save-dc">Save DC {{saveDc}}</div>
+    <div class="uses">/&infin; uses</div>
+  </div>
+  <div class="spell-group">
+    {{#spells}}
+      <div class="spell {{school}}">
+        <div class="spell-header">
+          <div class="school"></div>
+          <div class="name">{{name}}</div>
+        </div>
+        <table class="detail-table">
+          <caption>Casting</caption>
+          <tr><td>Casting Time</td><td>{{castingInfo.castingTime}}</td></tr>
+          <tr><td>Components</td><td>{{castingInfo.components}}</td></tr>
+        </table>
+        <table class="detail-table">
+          <caption>Effects</caption>
+          <tr><td>Range</td><td>{{effectInfo.range}}</td></tr>
+          {{#if effectInfo.effect}}
+            <tr><td>Effect</td><td>{{effectInfo.effect}}</td></tr>
+          {{/if}}
+          {{#if effectInfo.target}}
+            <tr><td>Target</td><td>{{effectInfo.target}}</td></tr>
+          {{/if}}
+          <tr><td>Duration</td><td>{{effectInfo.duration}}</td></tr>
+          <tr><td>Saving Throw</td><td>{{effectInfo.savingThrow}}</td></tr>
+        </table>
+        <div class="description">
+          {{! Use triple-brackets here because description is pre-rendered HTML from markdown}}
+          {{{description}}}
+        </div>
+      </div>
+    {{/spells}}
+  </div>
+{{/spellLevels}}

@@ -1,0 +1,130 @@
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+.spell-group-header {
+  display: -webkit-box;
+  display: flex;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+.spell-group-header div {
+  border: 2px solid #5f00e3;
+  padding: 5px 15px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+.uses {
+  padding-left: 80px !important;
+}
+.spell-group {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+.spell {
+  margin: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.3);
+  width: 350px;
+}
+@media print {
+  .spell {
+    box-shadow: none;
+  }
+}
+.spell-header {
+  display: -webkit-box;
+  display: flex;
+  color: white;
+  font-size: 1.1rem;
+  -webkit-box-align: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 10px;
+}
+.school {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin: 2px 10px 2px 0;
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.spell.evocation .spell-header {
+  background-color: #eb5834;
+}
+.spell.evocation .school {
+  color: #eb5834;
+}
+.spell.abjuration .spell-header {
+  background-color: #00b9d1;
+}
+.spell.abjuration .school {
+  color: #00b9d1;
+}
+.spell.transmutation .spell-header {
+  background-color: #484bdb;
+}
+.spell.transmutation .school {
+  color: #484bdb;
+}
+.spell.conjuration .spell-header {
+  background-color: #56ad36;
+}
+.spell.conjuration .school {
+  color: #56ad36;
+}
+.spell.universal .spell-header {
+  background-color: #666;
+}
+.spell.universal .school {
+  display: none;
+}
+.spell.evocation .school:after {
+  content: "e";
+}
+.spell.abjuration .school:after {
+  content: "a";
+}
+.spell.transmutation .school:after {
+  content: "t";
+}
+.spell.conjuration .school:after {
+  content: "c";
+}
+.detail-table {
+  width: calc(100% - 20px);
+  margin: 10px;
+  font-size: 0.85rem;
+}
+.detail-table caption {
+  text-align: left;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  padding: 2px 0px;
+}
+.detail-table td:first-child {
+  font-weight: bold;
+}
+.detail-table td:first-child:after {
+  content: ":"
+}
+.description {
+  padding: 0 10px 10px 10px;
+  font-size: 0.9rem;
+}
+.info {
+  font-size: 1.2rem !important;
+  max-width: 1000px;
+  margin: 20px 10px 40px 10px;
+}

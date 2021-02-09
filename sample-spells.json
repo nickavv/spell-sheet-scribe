@@ -1,26 +1,61 @@
 {
+  "casterLevel": 1,
+  "castingAttributeMod": 2,
   "spellLevels": [
     {
       "level": 0,
+      "totalUses": "&infin;",
       "spells": [
         {
           "name": "Ray of Frost",
-          "school": "Evocation",
-          "detailGroups": [
-            {
-              "title": "Casting",
-              "details": [
-                {
-                  "name": "Casting Time",
-                  "value": "1 Standard Action"
-                },
-                {
-                  "name": "Components",
-                  "value": "V,S"
-                }
-              ]
-            }
-          ]
+          "school": "evocation",
+          "castingInfo": {
+            "castingTime": "1 Standard Action",
+            "components": "V,S"
+          },
+          "effectInfo": {
+            "range": "Close (25 ft. + 5 ft./2 levels)",
+            "effect": "Ray",
+            "duration": "Instantaneous",
+            "savingThrow": "none; SR yes"
+          },
+          "description": "A ray of freezing air and ice projects from your pointing finger. You must succeed on a _ranged touch attack_ with the ray to deal damage to a target. The ray deals **1d3 points of cold damage**."
+        },
+        {
+          "name": "Resistance",
+          "school": "abjuration",
+          "castingInfo": {
+            "castingTime": "1 Standard Action",
+            "components": "V,S,M/DF (a miniature cloak)"
+          },
+          "effectInfo": {
+            "range": "Touch",
+            "target": "Creature Touched",
+            "duration": "1 Minute",
+            "savingThrow": "Will negates (harmless); SR yes (harmless)"
+          },
+          "description": "You imbue the subject with magical energy that protects it from harm, granting it a **+1 resistance bonus** on saves.\n\nResistance can be made permanent with a permanency spell."
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "totalUses": "4",
+      "spells": [
+        {
+          "name": "Burning Disarm",
+          "school": "transmutation",
+          "castingInfo": {
+            "castingTime": "1 Standard Action",
+            "components": "V,S"
+          },
+          "effectInfo": {
+            "range": "Close (25 ft. + 5 ft./2 levels)",
+            "target": "Held metal item of one creature or 15 lbs. of unattended metal",
+            "duration": "Instantaneous",
+            "savingThrow": "Reflex negates (object, see text); SR yes (object)"
+          },
+          "description": "This spell causes a metal object to instantly become red hot. A creature holding the item may attempt a Reflex save to drop it and take no damage (even if it is not their turn), otherwise the hot metal deals **1d4 points of fire damage per caster level (maximum 5d4)**. Circumstances that prevent the creature from dropping the item (such as a locked gauntlet) mean the creature gets no saving throw. The heat does not harm the item, and it does not get hot enough or last enough to ignite flammable objects. The item cools to its previous temperature almost instantly. If cast underwater, burning disarm deals half damage and boils the surrounding water."
         }
       ]
     }
