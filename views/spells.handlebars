@@ -31,8 +31,13 @@
           {{#if effectInfo.target}}
             <tr><td>Target</td><td>{{effectInfo.target}}</td></tr>
           {{/if}}
+          {{#if effectInfo.area}}
+            <tr><td>Area</td><td>{{effectInfo.area}}</td></tr>
+          {{/if}}
           <tr><td>Duration</td><td>{{effectInfo.duration}}</td></tr>
-          <tr><td>Saving Throw</td><td>{{effectInfo.savingThrow}}</td></tr>
+          {{#if effectInfo.savingThrow}}
+            <tr><td>Saving Throw</td><td>{{effectInfo.savingThrow}}</td></tr>
+          {{/if}}
         </table>
         <div class="description">
           {{! Use triple-brackets here because description is pre-rendered HTML from markdown}}
