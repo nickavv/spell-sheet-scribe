@@ -1,8 +1,10 @@
 {
+  "name": "Mr. Dr. Wizard Esq.",
   "casterLevel": 1,
   "castingAttributeMod": 2,
   "spellLevels": [
     {
+      "levelName": "Cantrips",
       "level": 0,
       "totalUses": "∞",
       "spells": [

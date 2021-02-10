@@ -1,14 +1,29 @@
-<table class="info detail-table">
-  <tr><td>DC</td><td>10 + Spell Level + casting modifier</td></tr>
-  <tr><td>Concentration Check</td><td>1d20 + Caster Level + casting modifier</td></tr>
-  <tr><td>Casting Defensively DC</td><td>15 + double spell level</td></tr>
-</table>
+<div id="sheet-header">
+  {{name}} level {{casterLevel}}
+</div>
+
+<div class="info">
+  <table class="detail-table">
+    <tr><td>DC</td><td>10 + Spell Level + casting modifier</td></tr>
+    <tr><td>Concentration Check</td><td>1d20 + Caster Level + casting modifier</td></tr>
+    <tr><td>Casting Defensively DC</td><td>15 + double spell level</td></tr>
+  </table>
+  <img src="cones.svg" />
+</div>
 
 {{#spellLevels}}
   <div class="spell-group-header">
-    <div class="level-name">Level {{level}}</div>
-    <div class="save-dc">Save DC {{saveDc}}</div>
-    <div class="uses">{{totalUses}} uses</div>
+    {{#if levelName}}
+      <div class="level-name">{{levelName}}</div>
+    {{else}}
+      <div class="level-name">Level {{level}}</div>
+    {{/if}}
+    {{#if saveDc}}
+      <div class="save-dc">Save DC {{saveDc}}</div>
+    {{/if}}
+    {{#if totalUses}}
+      <div class="uses">{{totalUses}} uses</div>
+    {{/if}}
   </div>
   <div class="spell-group">
     {{#spells}}
@@ -20,7 +35,12 @@
         <table class="detail-table">
           <caption>Casting</caption>
           <tr><td>Casting Time</td><td>{{castingInfo.castingTime}}</td></tr>
-          <tr><td>Components</td><td>{{castingInfo.components}}</td></tr>
+          {{#if castingInfo.components}}
+            <tr><td>Components</td><td>{{castingInfo.components}}</td></tr>
+          {{/if}}
+          {{#if castingInfo.uses}}
+            <tr><td>Uses</td><td>{{castingInfo.uses}}</td></tr>
+          {{/if}}
         </table>
         <table class="detail-table">
           <caption>Effects</caption>

@@ -30,7 +30,9 @@ app.listen(port, () => {
 
 function processSpellList(spellListJson) {
     for (let spellLevel of spellListJson.spellLevels) {
-        spellLevel.saveDc = 10 + spellLevel.level + spellListJson.castingAttributeMod;
+        if (spellLevel.level !== null) {
+            spellLevel.saveDc = 10 + spellLevel.level + spellListJson.castingAttributeMod;
+        }
         for (let spell of spellLevel.spells) {
             spell.description = md.render(spell.description);
         }
