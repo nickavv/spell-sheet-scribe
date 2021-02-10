@@ -50,39 +50,63 @@ body {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: end;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin: 2px 10px 2px 0;
   background-color: white;
   font-weight: bold;
   font-size: 1.1rem;
 }
-.spell.evocation .spell-header {
-  background-color: #eb5834;
-}
-.spell.evocation .school {
-  color: #eb5834;
-}
 .spell.abjuration .spell-header {
-  background-color: #00b9d1;
+  background-color: #B51A81;
 }
 .spell.abjuration .school {
-  color: #00b9d1;
-}
-.spell.transmutation .spell-header {
-  background-color: #484bdb;
-}
-.spell.transmutation .school {
-  color: #484bdb;
+  color: #B51A81;
 }
 .spell.conjuration .spell-header {
-  background-color: #56ad36;
+  background-color: #2DB285;
 }
 .spell.conjuration .school {
-  color: #56ad36;
+  color: #2DB285;
+}
+.spell.divination .spell-header {
+  background-color: #0031E5;
+}
+.spell.divination .school {
+  color: #0031E5;
+}
+.spell.enchantment .spell-header {
+  background-color: #51DD07;
+}
+.spell.enchantment .school {
+  color: #51DD07;
+}
+.spell.evocation .spell-header {
+  background-color: #ED7000;
+}
+.spell.evocation .school {
+  color: #ED7000;
+}
+.spell.illusion .spell-header {
+  background-color: #CC5252;
+}
+.spell.illusion .school {
+  color: #CC5252;
+}
+.spell.necromancy .spell-header {
+  background-color: #481877;
+}
+.spell.necromancy .school {
+  color: #481877;
+}
+.spell.transmutation .spell-header {
+  background-color: #21BEE8;
+}
+.spell.transmutation .school {
+  color: #21BEE8;
 }
 .spell.universal .spell-header {
   background-color: #666;
@@ -90,17 +114,29 @@ body {
 .spell.universal .school {
   display: none;
 }
-.spell.evocation .school:after {
-  content: "e";
-}
 .spell.abjuration .school:after {
   content: "a";
 }
-.spell.transmutation .school:after {
-  content: "t";
-}
 .spell.conjuration .school:after {
   content: "c";
+}
+.spell.divination .school:after {
+  content: "d";
+}
+.spell.enchantment .school:after {
+  content: "en";
+}
+.spell.evocation .school:after {
+  content: "ev";
+}
+.spell.illusion .school:after {
+  content: "i";
+}
+.spell.necromancy .school:after {
+  content: "n";
+}
+.spell.transmutation .school:after {
+  content: "t";
 }
 .detail-table {
   width: calc(100% - 20px);
